@@ -9,9 +9,10 @@ private:
     string ipAddress;
     string deviceName;
     bool isOnline;
+    string devicebrand;
     
 public:
-    NetworkDevice(const string& ip, const string& name, bool online = false);
+    NetworkDevice(const string& ip, const string& name, bool online = false,const string& brand = "");
         
 
     void displayInfo();
