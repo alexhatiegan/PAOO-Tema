@@ -1,0 +1,3 @@
+/home/alexandru/Paoo-Tema/build/CMakeFiles/Paoo-Tema.dir
+/home/alexandru/Paoo-Tema/build/CMakeFiles/edit_cache.dir
+/home/alexandru/Paoo-Tema/build/CMakeFiles/rebuild_cache.dir

@@ -5,7 +5,7 @@
 using namespace std;
 
 class NetworkDevice {
-private:
+protected:
     string ipAddress;
     string deviceName;
     bool isOnline;
@@ -14,10 +14,39 @@ private:
     
 public:
     NetworkDevice(const string& ip, const string& name, bool online = false,const string& brand = "", int code = 0);
-        
-    ~NetworkDevice();
     
-    void displayInfo();
+    NetworkDevice(const NetworkDevice& other);
+    
+    NetworkDevice(NetworkDevice&& other);
+    
+    NetworkDevice& operator=(const NetworkDevice& other);
+    
+    NetworkDevice& operator=(NetworkDevice&& other);
+    
+    virtual ~NetworkDevice();
+    
+    void displayInfo() const;
+    
+};
+
+class SecurityDevice : public NetworkDevice {
+private:
+	string adsecurity;
+public:
+    SecurityDevice(const string& ip, const string& name, bool online,const string& brand, int code, const string& security);
+    
+    SecurityDevice(const SecurityDevice& other);
+    
+    SecurityDevice(SecurityDevice&& other);
+    
+    SecurityDevice& operator=(const SecurityDevice& other);
+    
+    SecurityDevice& operator=(SecurityDevice&& other);
+    
+    ~SecurityDevice();
+    
+    void displayInfo() const;
+	
 };
 
 #endif
