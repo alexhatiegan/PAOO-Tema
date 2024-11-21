@@ -27,6 +27,10 @@ public:
     
     void displayInfo() const;
     
+    //NetworkDevice(const NetworkDevice& other) = delete;
+    
+    //NetworkDevice& operator=(const NetworkDevice& other) = delete;
+    
 };
 
 class SecurityDevice : public NetworkDevice {
@@ -46,6 +50,10 @@ public:
     ~SecurityDevice();
     
     void displayInfo() const;
+    
+    // SecurityDevice(const SecurityDevice& other) = delete;
+    
+    //SecurityDevice& operator=(const SecurityDevice& other) = delete;
 	
 };
 
